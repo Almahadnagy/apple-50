@@ -1,0 +1,521 @@
+body {
+    background-color: #F5F5F5;
+    /* background-image: url('https://i.ytimg.com/vi/hAsZCTL__lo/maxresdefault.jpg');  Debugging Linus (Csak vészhelyzet esetén kiengedhető!) */
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    scroll-behavior: smooth;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 40%;
+    z-index: 99999999; /* Ez nélkül a navbar egyszerűen a fejezetválasztó oldal mögé clippelne amikor a felhasználó ráviszi az egerét. */
+}
+
+.navbar {
+  border: 1px solid black;
+  display: flex;
+  list-style: none;
+  width: fit-content;
+  padding: 0;
+  margin: 15px auto;
+  backdrop-filter: blur(11px);
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 2px;
+  border-radius: 33px;
+}
+
+.navbar li {
+  margin: 4px 7px;
+  padding: 8px 0;
+}
+
+.navbar a {
+  color: black;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+
+.navbar a:hover {
+    color: rgb(201, 181, 196);
+    transition-duration: 0.33s;
+    transform: translateY(-3px);
+}
+
+.navbar a:not(:hover) {
+    color: black;
+    transition-duration: 0.33s;
+    transform: translateY(0);
+}
+
+/* Főoldal */
+
+#main-page-content {
+    width: 100%;
+    height: fit-content;
+    background-color: #F1F1F1;
+}
+
+#main-page-content h1 {
+    font-size: 50pt;
+    font-weight: 800;
+    padding-bottom: 55px;
+    padding-top: 180px;
+    text-align: center;
+}
+
+#main-page-content p {
+    font-size: 19pt;
+    text-align: justify;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+#logo-current {
+    max-width: 420px;
+    width: 5%;
+}
+
+#jobs-albert-watson {
+    float: right;
+    padding-right: 30px;
+    padding-left: 18px;
+    border-radius: 17px;
+    padding-bottom: 77px;
+}
+
+#main-page-content li {
+    font-size: 19pt;
+    text-align: justify;        
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+
+#jobs-speech-1-STANFORD { /* Ez csak egy videó! */
+    display: flex;
+    margin: 25px auto;
+    border-radius: 12px;
+}
+
+.vid-sub {
+    text-align: center;
+    margin-bottom: 75px;
+}
+/* Ezzel most csak tesztelem, hogy az Apple Shortcutom működik-e */
+
+#main-page-content q { 
+    display: block;
+    width: 510px;
+    font-size: 19pt;
+    text-align: justify;
+    margin: 25px auto;
+    border: 1px solid black;
+    padding: 15px;
+    border-left: 1px solid red;
+    border-left-width: 13px;
+    border-radius: 15px;
+    border-left-style: groove;
+}
+
+.next{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    color: black;
+    font-size: 21pt;
+    margin: 15px;
+}
+
+.next:hover {
+    color: rgb(201, 181, 196);
+    transition-duration: 0.33s;
+    transform: translateY(-3px);
+}
+
+.next:not(:hover) {
+    color: black;
+    transition-duration: 0.33s;
+    transform: translateY(0px);
+}
+
+#call-inflation {
+    display: flex;
+    margin: 25px auto;
+}
+
+.img-sub {
+    text-align: center;
+    margin-bottom: 75px;
+}
+
+/* Fejezetek */
+
+#chapters {
+    width: 100%;
+    background-color: #F1F1F1;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box; /* Ezt a neten találtam, nem tudom mit csinál, de működik! */
+}
+
+.card h4 {
+    font-size: 11pt;
+}
+
+#chapters h1 {
+    grid-column: 1 / 6;
+    font-size: 55pt;
+    font-weight: 800;
+    padding-bottom: 55px;
+    padding-top: 180px;
+    text-align: center;
+}
+
+.card {
+    border: 2.225px solid black;
+    padding: 15px;
+    background: white;
+    height: fit-content;
+    border-radius: 33px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease; /* Ezt az effektust a Stack Overflowon találtam :D */
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+}
+
+#chapters q { 
+    display: block;
+    width: 510px;
+    font-size: 19pt;
+    text-align: justify;
+    margin: 25px auto;
+    border: 1px solid black;
+    padding: 15px;
+    border-left: 13px groove red;
+    border-radius: 15px;
+}
+
+#chapters p, #chapters li {
+    font-size: 19pt;
+    text-align: justify;        
+    padding: 0 25px;
+}
+
+.chapter-button {
+    background-color: #0071e3;
+    width: 125px;
+    height: 35px;
+    margin-left: 2px;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: larger;
+    border-radius: 88px;
+    border: #0071e3;
+}
+
+.chapter-button a {
+    color: white;
+    text-decoration: none;
+}
+
+.chapter-button:hover {
+    background-color: #036cc7;
+}
+
+.apple-i-and-apple-ii {
+    display: flex;
+    margin: 25px auto;
+    border-radius: 11px;
+}
+
+#xerox-alto {
+    display: flex;
+    margin: 25px auto;
+    border-radius: 11px;
+}
+
+#Happy_Mac {
+    display: flex;
+    margin: 25px auto;
+    border-radius: 11px;
+}
+
+#ad-SUPERBOWL { /* Ez csak egy videó! */
+    display: flex;
+    margin: 25px auto;
+    border-radius: 12px;
+}
+
+#logo-NeXT {
+    display: flex;
+    margin: 25px auto;
+    border-radius: 11px;
+}
+
+#NeXTcube {
+    display: flex;
+    margin: 25px auto;
+    border-radius: 11px;
+}
+
+#Apple-Newton-MessagePad {
+    display: flex;
+    margin: 25px auto;
+    border-radius: 11px;
+}
+
+#Think_Different {
+    display: flex;
+    margin: 25px auto;
+    border-radius: 11px;
+}
+
+#iMac_G3 {
+    display: flex;
+    margin: 25px auto;
+    border-radius: 11px;
+}
+
+#All_Color_iMac {
+    display: flex;
+    margin: 25px auto;
+    border-radius: 11px;
+}
+
+.iPod {
+    display: flex;
+    margin: 25px auto;
+    border-radius: 11px;
+}
+
+#OneMoreThing {
+    display: flex;
+    margin: 25px auto;
+    border-radius: 11px;
+}
+
+#steve-jobs-introduces-IPHONE { /* Ez csak egy videó! */
+    display: flex;
+    margin: 25px auto;
+    border-radius: 12px;
+}
+
+/* Reszponszivitás */
+
+@media (max-width: 768px) {
+    nav {
+        left: 4%;
+        position: sticky;
+        top: 15px;
+    }
+
+    .navbar {
+        position: sticky;
+        top: 0px;
+        width: 90%;
+        display: flex;
+        justify-content: space-evenly;
+        font-size: smaller;
+    }
+
+    #jobs-speech-1-STANFORD {
+        width: fit-content;
+    }
+
+    #main-page-content q {
+        width: fit-content;
+        margin: 5px;
+    }
+
+    #jobs-albert-watson{
+        display: flex;
+        margin: 5px auto;
+        scale: 100%;
+        width: 100%;
+    }
+
+    #call-inflation {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 5px auto;
+        width: 100%;
+    }
+
+    #chapters {
+        grid-template-columns: 1fr;
+    }
+
+    #chapters h1, #chapters q, #chapters p, #chapters li {
+        grid-column: 1 / 2; /* Ha jól értelmeztem, ez megfelezi a képernyőn látható grideket? (W3schools, my beloved) */
+    }
+
+    #chapters q {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .chapter-button {
+        display: flex;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .apple-i-and-apple-ii {
+        scale: 90%;
+        width: 100%;
+    }
+
+    #xerox-alto {
+        scale: 90%;
+        width: 100%;
+    }
+
+    #ad-SUPERBOWL {
+        width: 380px;
+    }
+
+    #logo-NeXT {
+        scale: 90%;
+        width: 100%;
+    }
+
+    #NeXTcube {
+        scale: 90%;
+        width: 100%;
+    }
+
+    #Apple-Newton-MessagePad {
+        scale: 90%;
+        width: 100%;
+    }
+
+    #Think_Different {
+        scale: 90%;
+        width: 100%;
+    }
+
+    #iMac_G3 {
+        scale: 90%;
+        width: 100%;
+    }
+
+    #All_Color_iMac {
+        scale: 90%;
+        width: 100%;
+    }
+
+    .iPod {
+        scale: 90%;
+        width: 100%;
+    }
+
+    #OneMoreThing {
+        scale: 90%;
+        width: 100%;
+    }
+
+    #steve-jobs-introduces-IPHONE {
+        width: 300px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .navbar {
+        width: 80%;      
+        padding: 5px 20px;
+        gap: 15px;         
+        font-size: 1.1rem; /* Rem, mert megtehetem (: */ 
+    }
+    
+    #main-page-content {
+        width: 85%;  
+        margin: 0 auto;
+    }
+
+    #jobs-speech-1-STANFORD {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    #call-inflation {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 5px auto;
+
+    }
+
+    .apple-i-and-apple-ii {
+        scale: 90%;
+        width: 100%;
+    }
+
+    #chapters {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #chapters h1, #chapters q, #chapters p, #chapters li {
+        grid-column: 1 / 4;
+    }
+
+    #xerox-alto {
+        scale: 90%;
+        width: 100%;
+    }
+
+    #ad-SUPERBOWL {
+        width: fit-content;
+    }
+
+    #logo-NeXT {
+        scale: 90%;
+        width: 100%;
+    }
+
+    #NeXTcube {
+        scale: 90%;
+        width: 100%;
+    }
+
+    #Apple-Newton-MessagePad {
+        scale: 90%;
+        width: 100%;
+    }
+
+    #Think_Different {
+        scale: 90%;
+        width: 100%;
+    }
+
+    #iMac_G3 {
+        scale: 90%;
+        width: 100%;
+    }
+
+    #All_Color_iMac {
+        scale: 90%;
+        width: 100%;
+    }
+
+    .iPod {
+        scale: 90%;
+        width: 100%;
+    }
+
+    #OneMoreThing {
+        scale: 90%;
+        width: 100%;
+    }
+}
